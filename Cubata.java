@@ -11,6 +11,7 @@ public class Cubata
     
     private String nombre;
     private int cantidadDeAlcohol;
+    
 
     /**
      * Constructor de los objetos de la clase Cubata
