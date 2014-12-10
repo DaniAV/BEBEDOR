@@ -45,6 +45,13 @@ public class Bebedor
 
         this.NivelDeAlcoholEnSangre = NivelDeAlcoholEnSangre + nombre.getAlcohol(); //nombre.getAlcohol invoca a un metodo llamado getAlcohol de la clase 
                                                                                     //cubata dependiendo del nombre
+        this.DineroDisponible = DineroDisponible - nombre.getPrecioCubata();
+        
+        if (DineroDisponible < nombre.getPrecioCubata())
+        {
+            System.out.println ("No puede pedir mas copas, no tengo dinero");
+        }
+        
         if (NivelDeAlcoholEnSangre >= 10)
         {
             //No se puede beber mas

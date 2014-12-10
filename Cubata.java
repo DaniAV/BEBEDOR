@@ -33,5 +33,13 @@ public class Cubata
     {
         return cantidadDeAlcohol;
     }
+    
+    /**
+     * Metodo que devuelve el precio del cubata
+     */
+    public int getPrecioCubata()
+    {
+        return precio;
+    }
 
 }
