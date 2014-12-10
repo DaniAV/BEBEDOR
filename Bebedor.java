@@ -7,7 +7,7 @@
  */
 public class Bebedor
 {
-    
+
     //Aqui se almacenara el nivel de alcohol en sangre.
     private int NivelDeAlcoholEnSangre;
     // Aqui se almacena el nombre que le damos a los objetos de la clase bebedor
@@ -33,7 +33,6 @@ public class Bebedor
         CopasBebidas = 0;
         preguntaMasLarga = null;
         numeroDeCaracteres = 0;
-        
 
     }
 
@@ -43,15 +42,16 @@ public class Bebedor
     public void BeberCopa(Cubata nombre)
     {
 
-        this.NivelDeAlcoholEnSangre = NivelDeAlcoholEnSangre + nombre.getAlcohol(); //nombre.getAlcohol invoca a un metodo llamado getAlcohol de la clase 
-                                                                                    //cubata dependiendo del nombre
-        this.DineroDisponible = DineroDisponible - nombre.getPrecioCubata();
-        
-        if (DineroDisponible < nombre.getPrecioCubata())
+        this.NivelDeAlcoholEnSangre = NivelDeAlcoholEnSangre + nombre.getAlcohol(); //nombre.getAlcohol invoca a un metodo llamado getAlcohol de la clase
+        if (DineroDisponible >= nombre.getPrecioCubata())
         {
-            System.out.println ("No puede pedir mas copas, no tengo dinero");
+            this.DineroDisponible = DineroDisponible - nombre.getPrecioCubata();
         }
-        
+        else
+        {
+            System.out.println ("No tengo mas dinero");
+        }
+
         if (NivelDeAlcoholEnSangre >= 10)
         {
             //No se puede beber mas
@@ -63,6 +63,14 @@ public class Bebedor
 
         }
 
+    }
+
+    /**
+     * Metodo que devuelve la cantidad de dinero que le queda a cada objeto de la clase bebedor
+     */
+    public int CuantoMeQueda()
+    {
+        return DineroDisponible;
     }
 
     /**
@@ -98,4 +106,3 @@ public class Bebedor
     }
 }
 
-    
