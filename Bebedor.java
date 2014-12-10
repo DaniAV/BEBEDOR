@@ -18,18 +18,22 @@ public class Bebedor
     private String preguntaMasLarga;
     //Almacena la cantidad de caracteres de la pregunta
     private int numeroDeCaracteres;
+    //Almacena la cantidad de dinero de la que disopone el bebedor
+    private int DineroDisponible;
 
     /**
-     * Constructor for objects of class Bebedor
+     * Constructor para los objetos de la clase Bebedor
      */
-    public Bebedor(String nombre)
+    public Bebedor(String nombre, int DineroDisponible)
     {
         //Inicializamos los atributos de la clase bebedor
         this.nombre = nombre;
+        this.DineroDisponible = DineroDisponible;
         NivelDeAlcoholEnSangre = 0;
         CopasBebidas = 0;
         preguntaMasLarga = null;
         numeroDeCaracteres = 0;
+        
 
     }
 
