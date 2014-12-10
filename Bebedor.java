@@ -39,12 +39,17 @@ public class Bebedor
     public void BeberCopa(Cubata nombre)
     {
 
-        this.NivelDeAlcoholEnSangre = NivelDeAlcoholEnSangre + nombre.getAlcohol(); //nombre.getAlcohol invoca a un metodo llamado getAlcohol de la clase cubata dependiendo del nombre
-        if (NivelDeAlcoholEnSangre > 10)
+        this.NivelDeAlcoholEnSangre = NivelDeAlcoholEnSangre + nombre.getAlcohol(); //nombre.getAlcohol invoca a un metodo llamado getAlcohol de la clase 
+                                                                                    //cubata dependiendo del nombre
+        if (NivelDeAlcoholEnSangre >= 10)
         {
             //No se puede beber mas
             System.out.println (" No puedo beber mas, estoy muy borracho");
             NivelDeAlcoholEnSangre = 10;
+        }
+        else
+        {
+
         }
 
     }
@@ -73,7 +78,7 @@ public class Bebedor
         }
         else if(NivelDeAlcoholEnSangre > 10 || preguntaMasLarga.contains(nombre))//Si el nivel de alcohol supera el 10 y la preguntaMasLarga contiene el atributo nombre entonces...
         {
-            System.out.println ("¡¡¡! " + tipoPregunta.toUpperCase() +" !!!");
+            System.out.println ("¡¡¡ " + tipoPregunta.toUpperCase() +" !!!");
         }
         else // sino suceda nada de los dos casos anteriores entonces...
         {
